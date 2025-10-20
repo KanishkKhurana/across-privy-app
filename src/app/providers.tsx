@@ -14,7 +14,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
             createOnLogin: "users-without-wallets",
           },
         },
-        loginMethods: ["google"],
+        loginMethods: ["google", "wallet"],
         supportedChains: [mainnet, unichain, optimism, arbitrum, base],
       }}
     >
