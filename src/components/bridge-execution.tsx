@@ -68,7 +68,7 @@ export function BridgeExecution({
 
       // Initialize execution status
       const status: Record<number, "pending"> = {};
-      data.routes.forEach((_: any, idx: number) => {
+      data.routes.forEach((idx: number) => {
         status[idx] = "pending";
       });
       setExecutionStatus(status);

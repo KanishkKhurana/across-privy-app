@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 export default function DiagnosticsPage() {
-  const [chains, setChains] = useState<any>(null);
-  const [routes, setRoutes] = useState<any>(null);
+  const [chains, setChains] = useState(null);
+  const [routes, setRoutes] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const fetchChains = async () => {
@@ -16,7 +16,7 @@ export default function DiagnosticsPage() {
       setChains(data);
     } catch (error) {
       console.error("Error fetching chains:", error);
-      setChains({ error: "Failed to fetch chains" });
+      setChains(null);
     } finally {
       setLoading(false);
     }
@@ -30,7 +30,7 @@ export default function DiagnosticsPage() {
       setRoutes(data);
     } catch (error) {
       console.error("Error fetching routes:", error);
-      setRoutes({ error: "Failed to fetch routes" });
+      setRoutes(null);
     } finally {
       setLoading(false);
     }
@@ -75,7 +75,7 @@ export default function DiagnosticsPage() {
           <h3 className="font-semibold text-yellow-900 mb-2">Debugging Tips</h3>
           <ul className="text-sm text-yellow-800 space-y-1 list-disc list-inside">
             <li>
-              If you get "Bad Request" errors, check the server logs in your
+              If you get `Bad Request` errors, check the server logs in your
               terminal
             </li>
             <li>

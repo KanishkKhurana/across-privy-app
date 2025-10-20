@@ -11,5 +11,5 @@ export const getChainIdFromNetwork = (network: string): number => {
 };
 
 export const getNetworkFromChainId = (chainId: number): string | undefined => {
-  return Object.entries(CHAIN_ID_MAP).find(([_, id]) => id === chainId)?.[0];
+  return Object.entries(CHAIN_ID_MAP).find(([, id]) => id === chainId)?.[0];
 };
