@@ -92,10 +92,19 @@ export function TokenSelectorItem({
               alt={token.tokenMetadata.symbol}
               className="h-10 w-10 rounded-full"
             />
+          ) : token.tokenMetadata?.symbol==="USDC" ? ( 
+
+            <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center">
+              <img
+              src={`https://app.across.to/assets/usdc-174196f9.svg`}
+              alt={token.tokenMetadata.symbol}
+              className="h-10 w-10 rounded-full"
+            />
+            </div>
           ) : (
             <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center">
               <span className="text-xs font-semibold text-muted-foreground">
-                {token.tokenMetadata?.symbol?.substring(0, 3)}
+                {token.tokenMetadata?.symbol?.substring(0, 4)}
               </span>
             </div>
           )}

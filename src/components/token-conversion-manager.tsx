@@ -181,7 +181,7 @@ export function TokenConversionManager({
         </div>
       ) : (
         <div className="space-y-3">
-          {tokens.map((token) => {
+          {tokens.filter((item)=> !item.tokenMetadata?.name.includes("✅")).map((token) => {
             const key = getTokenKey(token);
             const selected = selectedTokens.get(key);
             return (
