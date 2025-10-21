@@ -87,6 +87,7 @@ export function TokenSelectorItem({
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3 flex-1">
           {token.tokenMetadata?.logo ? (
+            /* eslint-disable-next-line @next/next/no-img-element */
             <img
               src={token.tokenMetadata.logo}
               alt={token.tokenMetadata.symbol}
@@ -95,6 +96,7 @@ export function TokenSelectorItem({
           ) : token.tokenMetadata?.symbol==="USDC" ? ( 
 
             <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
               src={`https://app.across.to/assets/usdc-174196f9.svg`}
               alt={token.tokenMetadata.symbol}

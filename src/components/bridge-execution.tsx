@@ -24,7 +24,7 @@ export function BridgeExecution({
   const { sendTransaction } = useSendTransaction();
   
   // Force a re-render when wallets change to get updated chain info
-  const [walletUpdateTrigger, setWalletUpdateTrigger] = useState(0);
+  const [_walletUpdateTrigger, setWalletUpdateTrigger] = useState(0);
   const [loading, setLoading] = useState(false);
   const [routes, setRoutes] = useState<BridgeRoute[]>([]);
   const [executionStatus, setExecutionStatus] = useState<
@@ -73,6 +73,7 @@ export function BridgeExecution({
 
       // Initialize execution status
       const status: Record<number, "pending"> = {};
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       data.routes.forEach((_: any, idx: number) => {
         status[idx] = "pending";
       });

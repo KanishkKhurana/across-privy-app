@@ -70,6 +70,7 @@ export function TargetTokenSelector({
                       : "border-border hover:border-primary/50"
                   }`}
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={token.logo}
                     alt={token.symbol}
