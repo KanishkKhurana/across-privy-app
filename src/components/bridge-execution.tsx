@@ -73,7 +73,7 @@ export function BridgeExecution({
 
       // Initialize execution status
       const status: Record<number, "pending"> = {};
-      data.routes.forEach((_: any, idx: number) => {
+      data.routes.forEach(( idx: number) => {
         status[idx] = "pending";
       });
       setExecutionStatus(status);
@@ -567,7 +567,7 @@ export function BridgeExecution({
                 <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
                   <p className="text-sm text-blue-800">
                     💡 The app will automatically switch your wallet to the correct network for each transaction. 
-                    You'll be prompted to approve network switches when needed.
+                    You will be prompted to approve network switches when needed.
                   </p>
                 </div>
               )}
